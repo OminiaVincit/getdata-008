@@ -9,7 +9,7 @@
 #    5. Creates a second, independent tidy data set with the average
 #       of each variable for each activity and each subject
 #
-#   This codebook is created with great references from this github link.
+#   This analysis file is created with great references from this github link.
 #      https://github.com/benjamin-chan/GettingAndCleaningData
 #-------------------------------------------------------------------
 
