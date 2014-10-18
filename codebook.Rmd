@@ -1,0 +1,57 @@
+Codebook
+========
+This codebook is created with great references from this github link.
+https://github.com/benjamin-chan/GettingAndCleaningData
+
+Variable list and descriptions
+------------------------------
+
+Variable name    | Description
+-----------------|------------
+Subject          | ID the subject who performed the activity for each window sample. Its range is from 1 to 30.
+ActivityName     | Activity name
+Domain           | Feature: Time domain signal or frequency domain signal (Time or Freq)
+Instrument       | Feature: Measuring instrument (Accelerometer or Gyroscope)
+Acceleration     | Feature: Acceleration signal (Body or Gravity)
+Variable         | Feature: Variable (Mean or SD)
+Jerk             | Feature: Jerk signal
+Magnitude        | Feature: Magnitude of the signals calculated using the Euclidean norm
+Axis             | Feature: 3-axial signals in the X, Y and Z directions (X, Y, or Z)
+Count            | Feature: Count of data points used to compute `average`
+Avg              | Feature: Average of each variable for each activity and each subject
+
+Dataset structure
+-----------------
+
+```{r}
+str(tidyData)
+```
+
+List the key variables
+----------------------------------------
+
+```{r}
+key(tidyData)
+```
+
+Head of data set
+------------------------------
+
+```{r}
+head(tidyData)
+```
+
+Summary of variables
+--------------------
+
+```{r}
+summary(tidyData)
+```
+
+Save to file
+------------
+
+```{r save}
+f <- file.path(path, "tidy-UCI-HAR-Dataset.txt")
+write.table(tidyData, f, row.names=FALSE)
+```
